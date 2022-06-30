@@ -11,7 +11,7 @@ const Header = () => {
           </Link>
         </li>
         <li className="nav-item d-none d-sm-inline-block">
-          <Link onClick={() => openTab('https://github.com/samsularifin05/admin-lte-react')} to="#" className="nav-link">
+          <Link onClick={() => openTab('https://github.com/samsularifin05/laravel-react-admin-lte')} to="#" className="nav-link">
             Download Project
           </Link>
         </li>

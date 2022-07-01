@@ -1,4 +1,5 @@
 ## Laravel React Admin Lte
+Demo : http://laravel-react-admin-lte.herokuapp.com/
 ## Running
 1. composer install 
 2. php artisan key:generate
@@ -11,3 +12,5 @@
 
 ## Note Jika Ingin Mengosongkan database
 php artisan migrate:rollback 
+
+

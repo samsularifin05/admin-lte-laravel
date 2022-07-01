@@ -1,5 +1,8 @@
 ## Laravel React Admin Lte
 Demo : http://laravel-react-admin-lte.herokuapp.com/
+user : superadmin@gmail.com
+pass : 123456
+
 ## Running
 1. composer install 
 2. php artisan key:generate

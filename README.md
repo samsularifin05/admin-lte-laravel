@@ -1,5 +1,7 @@
 ## Laravel React Admin Lte
 Demo : http://laravel-react-admin-lte.herokuapp.com/
+
+User Demo
 user : superadmin@gmail.com
 pass : 123456
 

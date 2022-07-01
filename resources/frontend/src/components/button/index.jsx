@@ -8,6 +8,7 @@ const Button = (props) => {
     <button
       disabled={props.loading ? (isLoading ? "disabled" : "") : ""}
       type={props.type}
+      onClick={props.onClick}
       className={`btn btn-${props.color} ${props.block && "btn-block"}`}
     >
       {props.loading ? (

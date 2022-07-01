@@ -1,7 +1,7 @@
 const Validate = (value) => {
     const errors = {};
-    if (!value.username) {
-      errors.username = "Username is tequired";
+    if (!value.email) {
+      errors.email = "Email is tequired";
     }
     if (!value.password) {
       errors.password = "Password is required";

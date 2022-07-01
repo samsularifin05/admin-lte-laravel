@@ -2,6 +2,7 @@ import { React, useDispatch, useEffect } from "../../components";
 import { actionTheme, utilityAction } from "../../reduxStore";
 import { withRouter } from "react-router-dom";
 import FormLogin from "./form";
+import { login } from "./redux";
 
 const Login = (props) => {
   const dispatch = useDispatch();
@@ -18,15 +19,15 @@ const Login = (props) => {
     };
   }, [dispatch]);
 
-  const handleSubmit = () => {
-    dispatch(utilityAction.setProgres());
-    dispatch(utilityAction.setLoading(true));
-    setTimeout(() => {
-    dispatch(utilityAction.setLoading(false));
-      props.history.push("/dashboard");
-      window.location.reload();
-    }, 4000);
-  };
+  // const handleSubmit = () => {
+  //   dispatch(utilityAction.setProgres());
+  //   dispatch(utilityAction.setLoading(true));
+  //   setTimeout(() => {
+  //   dispatch(utilityAction.setLoading(false));
+  //     props.history.push("/dashboard");
+  //     window.location.reload();
+  //   }, 4000);
+  // };
   return (
     <div className="login-box container" style={{ marginTop: "10%" }}>
       <div className="card card-outline card-primary">
@@ -37,7 +38,7 @@ const Login = (props) => {
         </div>
         <div className="card-body">
           <p className="login-box-msg">Sign in to start your session</p>
-          <FormLogin onSubmit={(data)=>handleSubmit(data)} />
+          <FormLogin onSubmit={()=>dispatch(login())} />
         </div>
       </div>
     </div>

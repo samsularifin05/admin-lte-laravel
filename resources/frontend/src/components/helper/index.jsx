@@ -81,7 +81,9 @@ export function ToastNotification(status, text) {
       .catch(reject("error"));
   });
 }
-
+export const removeItem = (nama) => {
+    localStorage.removeItem(nama);
+  };
 export const ReanderField = ({
     input,
     label,

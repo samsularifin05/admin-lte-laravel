@@ -1,4 +1,5 @@
 import { Dashboard, FormControl, Jenis, Kategori, Login } from "../../pages";
+import Logout from "../../pages/logout";
 
 const MenuRoutes = [
   {
@@ -30,6 +31,12 @@ const MenuRoutes = [
     exact: true,
     title: "Form Control",
     component: () => <FormControl />
+  },
+  {
+    path: "/logout",
+    exact: true,
+    title: "Form Control",
+    component: () => <Logout />
   },
  
 ];

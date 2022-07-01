@@ -18,7 +18,8 @@ import {
   postData,
   setItem,
   getItem,
-  ToastNotification
+  ToastNotification,
+  removeItem
 } from "./helper";
 import { connect } from "react-redux";
 import { Field } from "redux-form";
@@ -28,6 +29,7 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 export {
+  removeItem,
   ToastNotification,
   getItem,
   setItem,

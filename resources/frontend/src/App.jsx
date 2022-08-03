@@ -11,7 +11,6 @@ import {
     getItem,
 } from "./components/index.jsx";
 import { selectorThemes, selectorUtility } from "./reduxStore";
-import "react-loading-skeleton/dist/skeleton.css";
 import Skeleton from "react-loading-skeleton";
 import { Redirect } from "react-router-dom";
 //Tes

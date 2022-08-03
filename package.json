@@ -17,13 +17,13 @@
         "browser-sync": "^2.27.10",
         "browser-sync-webpack-plugin": "^2.3.0",
         "laravel-mix": "^6.0.49",
-        "laravel-vite-plugin": "^0.2.1",
+        "laravel-mix-purgecss": "^6.0.0",
         "lodash": "^4.17.19",
         "postcss": "^8.1.14",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "react-scripts": "5.0.1",
-        "vite": "^2.9.11",
+        "sass": "^1.54.0",
         "web-vitals": "^2.1.4"
     },
     "dependencies": {

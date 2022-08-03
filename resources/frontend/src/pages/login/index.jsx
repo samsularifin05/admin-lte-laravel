@@ -33,8 +33,6 @@ const Login = (props) => {
 
     const handleSubmit = (data) => {
         dispatch(utilityAction.setLoading(true));
-        dispatch(utilityAction.setLoading(false));
-        dispatch(utilityAction.setLoading(true));
         postData("login", {
             email: data.email,
             password: data.password,

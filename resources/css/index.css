@@ -1,6 +1,5 @@
 @import "./adminlte.css";
 @import "./OverlayScrollbars.css";
-
 .loading-background{
     z-index: 9999 !important;
 }
@@ -11,7 +10,6 @@
     font-size: 80%;
     color: #dc3545;
 }
-
 .form-control.is-invalid, .was-validated .form-control:invalid {
     border-color: #dc3545;
     padding-right: 2.25rem!important;

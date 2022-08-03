@@ -1,5 +1,6 @@
 {
-    "/js/app.js": "/js/app.js?id=44426612c43e12483c49a6bcd92fc059",
+    "/js/app.js": "/js/app.js?id=e96f9c574d3c55ce9f6435f2ff7d62d8",
+    "/css/app.css": "/css/app.css?id=d12d1abeebdcfae6c48f41adc3dd6c9c",
     "/favicon.ico": "/favicon.ico?id=b813881ffe7b1199eee34977e7a31bf9",
     "/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.ttf": "/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.ttf?id=271b60d8619482f8168b10c9d9bd75c6",
     "/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff2": "/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff2?id=0b5984039692449bafd77ec6b2a94ffd",
@@ -12,12 +13,16 @@
     "/images/logo.svg": "/images/logo.svg?id=06e733283fa43d1dd57738cfc409adbd",
     "/index.html": "/index.html?id=2deb861de187727d143a45e9f64980cc",
     "/index.php": "/index.php?id=3b58bff18126a61c142cc576457c82a6",
+    "/js/app.js.LICENSE.txt": "/js/app.js.LICENSE.txt?id=31d880b17f6a8bd4a8d41c38a92f0dbe",
     "/js/chunks/node_modules_web-vitals_dist_web-vitals_js.js": "/js/chunks/node_modules_web-vitals_dist_web-vitals_js.js?id=179aa87cec5771dd61ccd925db490996",
     "/js/chunks/resources_frontend_src_pages_datamaster_jenis_index_jsx.js": "/js/chunks/resources_frontend_src_pages_datamaster_jenis_index_jsx.js?id=773a679dbd375285f336b6831ddf126e",
     "/js/chunks/resources_frontend_src_pages_datamaster_kategori_index_jsx.js": "/js/chunks/resources_frontend_src_pages_datamaster_kategori_index_jsx.js?id=f988b7e1ad12397fc4f3915858083352",
+    "/js/manifest.js": "/js/manifest.js?id=0b4a3df8b36ba5d8e1e208b0df28db62",
+    "/js/vendor.js": "/js/vendor.js?id=1b6d69d7f608fd7f7869fd55c309f4fb",
+    "/js/vendor.js.LICENSE.txt": "/js/vendor.js.LICENSE.txt?id=8f50a4167d9309d5979c9a8bc69720a3",
     "/logo192.png": "/logo192.png?id=995306f3f1b50873ba0fe4c857a90d22",
     "/logo512.png": "/logo512.png?id=93c81d868a39562d52258e5b5b267644",
     "/manifest.json": "/manifest.json?id=d9d975cebe2ec20b6c652e1e4c12ccf0",
-    "/mix-manifest.json": "/mix-manifest.json?id=a1180edc3b5ebe40aeffa3176d3febd2",
+    "/mix-manifest.json": "/mix-manifest.json?id=b7b4890ccda98389586ba25c82142d2b",
     "/robots.txt": "/robots.txt?id=fa1ded1ed7c11438a9b0385b1e112850"
 }

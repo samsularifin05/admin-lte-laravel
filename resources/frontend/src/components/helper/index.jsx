@@ -10,7 +10,7 @@ const server =
 export function postData(endpoint, data) {
     let config = {
         headers: {
-            "x-auth-token": getItem('userdata'),
+            "x-auth-token": getItem("userdata"),
         },
     };
     return new Promise((resolve, reject) => {
@@ -25,12 +25,12 @@ export function postData(endpoint, data) {
 }
 
 export const setItem = (nama, data) => {
-  localStorage.setItem(nama, JSON.stringify(data));
+    localStorage.setItem(nama, JSON.stringify(data));
 };
 export const getItem = (nama) => {
-  return localStorage.getItem(nama) === null
-    ? []
-    : JSON.parse(localStorage.getItem(nama) || "");
+    return localStorage.getItem(nama) === null
+        ? []
+        : JSON.parse(localStorage.getItem(nama) || "");
 };
 export const getMeta = (metaName) => {
     const metas = document.getElementsByTagName("meta");
@@ -61,29 +61,29 @@ export const openTab = (url) => {
 };
 
 const Toast = Swal.mixin({
-  toast: true,
-  position: "top-end",
-  showConfirmButton: false,
-  timer: 3000,
-  timerProgressBar: true,
-  didOpen: (toast) => {
-    toast.addEventListener("mouseenter", Swal.stopTimer);
-    toast.addEventListener("mouseleave", Swal.resumeTimer);
-  },
+    toast: true,
+    position: "top-end",
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+        toast.addEventListener("mouseenter", Swal.stopTimer);
+        toast.addEventListener("mouseleave", Swal.resumeTimer);
+    },
 });
 export function ToastNotification(status, text) {
-  return new Promise((resolve, reject) => {
-    Toast.fire({
-      icon: status,
-      title: text,
-    })
-      .then(resolve("berhasil"))
-      .catch(reject("error"));
-  });
+    return new Promise((resolve, reject) => {
+        Toast.fire({
+            icon: status,
+            title: text,
+        })
+            .then(resolve("berhasil"))
+            .catch(reject("error"));
+    });
 }
 export const removeItem = (nama) => {
     localStorage.removeItem(nama);
-  };
+};
 export const ReanderField = ({
     input,
     label,

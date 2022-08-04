@@ -16,7 +16,7 @@ export function postData(endpoint, data) {
     return new Promise((resolve, reject) => {
         Axios.post(server + endpoint, data, config)
             .then((res) => {
-                resolve(res.data);
+                resolve(res);
             })
             .catch((err) => {
                 reject(err?.response?.data || "Tidak Terhubung Keserver");

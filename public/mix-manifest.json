@@ -1,6 +1,6 @@
 {
-    "/js/app.js": "/js/app.js?id=e96f9c574d3c55ce9f6435f2ff7d62d8",
-    "/css/app.css": "/css/app.css?id=d12d1abeebdcfae6c48f41adc3dd6c9c",
+    "/js/app.js": "/js/app.js",
+    "/css/app.css": "/css/app.css",
     "/favicon.ico": "/favicon.ico?id=b813881ffe7b1199eee34977e7a31bf9",
     "/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.ttf": "/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.ttf?id=271b60d8619482f8168b10c9d9bd75c6",
     "/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff2": "/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff2?id=0b5984039692449bafd77ec6b2a94ffd",
@@ -23,6 +23,6 @@
     "/logo192.png": "/logo192.png?id=995306f3f1b50873ba0fe4c857a90d22",
     "/logo512.png": "/logo512.png?id=93c81d868a39562d52258e5b5b267644",
     "/manifest.json": "/manifest.json?id=d9d975cebe2ec20b6c652e1e4c12ccf0",
-    "/mix-manifest.json": "/mix-manifest.json?id=b7b4890ccda98389586ba25c82142d2b",
+    "/mix-manifest.json": "/mix-manifest.json?id=f4dbe2815c7c9687bd527b6c01e4f442",
     "/robots.txt": "/robots.txt?id=fa1ded1ed7c11438a9b0385b1e112850"
 }

@@ -31,10 +31,10 @@ const App = () => {
                     {content && <Content />}
                     {footer && <Footer />}
                     <LoadingBar color={"red"} progress={progress} />
-                    {loading && <LoadingContent />}
                 </div>
             ) : (
                 <div>
+                    {loading && <LoadingContent />}
                     {localStorage.clear()}
                     <Redirect to="/" />
                     {content && <Content />}

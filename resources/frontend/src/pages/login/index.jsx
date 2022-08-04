@@ -31,25 +31,26 @@ const Login = (props) => {
         };
     }, [dispatch]);
 
-    const handleSubmit = (data) => {
+    const handleSubmit = async (data) => {
         dispatch(utilityAction.setLoading(true));
-        postData("login", {
-            email: data.email,
-            password: data.password,
-        })
-            .then((res) => {
-                setItem("userdata", res.data);
+        try {
+            let feedback = await postData("login", {
+                email: data.email,
+                password: data.password,
+            })
+            if(feedback.status === 200){
+                setItem("userdata", feedback.data.result);
                 dispatch(utilityAction.setLoading(false));
                 setTimeout(() => {
                     props.history.push("/dashboard");
                     window.location.reload();
                 }, 300);
-            })
-            .catch((err) => {
-                // console.log(err?.message);
-                ToastNotification("info", err?.message);
-                dispatch(utilityAction.setLoading(false));
-            });
+            }
+        } catch (error) {
+            console.log(error)
+             ToastNotification("info", error?.message);
+             dispatch(utilityAction.setLoading(false));
+        }
     };
     return (
         <div className="login-box container" style={{ marginTop: "10%" }}>

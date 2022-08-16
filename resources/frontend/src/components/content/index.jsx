@@ -1,6 +1,9 @@
 import { React, useEffect, Route } from "../../components";
 import { withRouter } from "react-router-dom";
 import MenuRoutes from "../router";
+import { Suspense } from "react";
+import Skeleton from "react-loading-skeleton";
+import { PageNotFound } from "../../pages";
 
 const Content = (props) => {
   
@@ -21,18 +24,15 @@ const Content = (props) => {
   });
 
   return (
-    <div>
-      {MenuRoutes.map((route, index) => {
-        return (
-          <Route
-            key={index}
-            path={route.path}
-            exact={route.exact}
-            component={route.component}
-          />
-        );
-      })}
-    </div>
+    <Suspense fallback={<Skeleton width={'100%'} height={1000} />}>
+       {MenuRoutes.find((list) => list.path === props.history.location.pathname) === undefined ? (
+        <Route component={() => <PageNotFound />} />
+      ) : (
+        MenuRoutes.map((route, index) => (
+          <Route key={index} exact={route.exact} path={route.path} component={route?.component} />
+        ))
+      )}
+    </Suspense>
   );
 };
 

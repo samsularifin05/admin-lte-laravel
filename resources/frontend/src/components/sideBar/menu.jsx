@@ -67,8 +67,14 @@ const menu = [
         title: "Jenis",
         is_show: false,
       },
+      {
+        path: "/404",
+        title: "Page Not Found",
+        is_show: false,
+      },
     ]
   },
+ 
   {
     path: "/logout",
     icon: "nav-icon fas fa-arrow-right-from-bracket",

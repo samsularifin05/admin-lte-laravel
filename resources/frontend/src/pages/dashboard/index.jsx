@@ -7,7 +7,7 @@ const Dashboard = () => {
         <div className="col-lg-3 col-6">
           <div className="small-box bg-info">
             <div className="inner">
-              <h3>150</h3>
+              <div className="count">150</div >
               <p>New Orders</p>
             </div>
             <div className="icon">
@@ -21,9 +21,9 @@ const Dashboard = () => {
         <div className="col-lg-3 col-6">
           <div className="small-box bg-success">
             <div className="inner">
-              <h3>
+              <div className="count">
                 53<sup style={{ fontSize: "20px" }}>%</sup>
-              </h3>
+              </div>
               <p>Bounce Rate</p>
             </div>
             <div className="icon">
@@ -38,7 +38,7 @@ const Dashboard = () => {
         <div className="col-lg-3 col-6">
           <div className="small-box bg-warning">
             <div className="inner">
-              <h3>44</h3>
+              <div className="count">44</div>
               <p>User Registrations</p>
             </div>
             <div className="icon">
@@ -53,7 +53,7 @@ const Dashboard = () => {
         <div className="col-lg-3 col-6">
           <div className="small-box bg-danger">
             <div className="inner">
-              <h3>65</h3>
+              <div className="count">65</div>
               <p>Unique Visitors</p>
             </div>
             <div className="icon">

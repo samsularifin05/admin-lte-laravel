@@ -9,10 +9,7 @@ const menu = [
     icon: "nav-icon fas fa-pen-to-square",
     title: "Form Control",
   },
-  {
-    navheader : true,
-    title: "MULTI LEVEL EXAMPLE",
-  },
+ 
   {
     path: "#",
     icon: "nav-icon fas fa-database",
@@ -54,10 +51,7 @@ const menu = [
     ]
   },
 
-  {
-    navheader : true,
-    title: "EXAMPLES",
-  },
+
   {
     path: "#",
     icon: "nav-icon fas fa-database",

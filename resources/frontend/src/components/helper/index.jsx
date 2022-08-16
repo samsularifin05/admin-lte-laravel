@@ -164,7 +164,7 @@ export const ReanderSelect = ({
     textColor = "text-black",
 }) => (
     <div className="form-group">
-        <label htmlFor="" className={textColor}>
+        <label htmlFor={id} className={textColor}>
             {label}
         </label>
         <Select

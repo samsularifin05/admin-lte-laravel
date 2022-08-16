@@ -35,6 +35,7 @@ let FormInput = (props) => {
           <Col size="3">
             <Field
               name="level"
+              id="level"
               component={ReanderSelect}
               label="Level"
               options={[
@@ -52,7 +53,7 @@ let FormInput = (props) => {
           </Col>
           <Col size="3" className="mt-2">
             <br />
-            <Button type="submit" color="primary" block title="Kirim" />
+            <Button type="button" color="primary" block title="Kirim" />
           </Col>
         </Row>
       </form>

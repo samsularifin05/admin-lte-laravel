@@ -44,7 +44,7 @@ const SidebarNavList = (props) => {
             </Link> : null
           )}
           {props.data.children && (
-            <ul className="nav nav-treeview">
+            <ul className="nav nav-treeview" role="tablist">
               {props.data.children &&
                 props.data.children.map((submenu, i) => (
                   <SidebarNavList

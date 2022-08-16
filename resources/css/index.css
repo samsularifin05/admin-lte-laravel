@@ -3,6 +3,10 @@
 .loading-background{
     z-index: 9999 !important;
 }
+.count {
+    font-size: 2rem;
+    font-weight: bold;
+}
 .invalid-feedback {
     display: block;
     width: 100%;

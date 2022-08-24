@@ -5770,7 +5770,7 @@ var FormInput = function FormInput(props) {
           size: "3",
           className: "mt-2",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_components__WEBPACK_IMPORTED_MODULE_0__.Button, {
-            type: "button",
+            type: "submit",
             color: "primary",
             block: true,
             title: "Kirim"

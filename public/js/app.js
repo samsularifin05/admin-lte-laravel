@@ -5182,21 +5182,20 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 var SidebarNavList = function SidebarNavList(props) {
   var icon = props.data.icon && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
     className: props.data.icon
   });
 
-  var label = props.data.label && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-    children: props.data.label
-  });
-
   var titlesub = props.data.title && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
-    children: [props.data.title, " ", label]
+    children: [props.data.title, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
+      className: "right fas fa-angle-left"
+    })]
   });
 
-  var title = props.data.title && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
-    children: [props.data.title, " ", label]
+  var title = props.data.title && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+    children: props.data.title
   });
 
   var _useState = (0,_components__WEBPACK_IMPORTED_MODULE_0__.useState)(-1),
@@ -5219,36 +5218,37 @@ var SidebarNavList = function SidebarNavList(props) {
     path: props.data.path,
     exact: props.data.exact,
     children: function children(_ref) {
-      var match = _ref.match,
-          i = _ref.i;
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
-        className: "nav-item",
-        children: [props.data.children ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components__WEBPACK_IMPORTED_MODULE_0__.Link, {
-          to: props.data.path,
-          className: "nav-link",
-          children: [icon, " ", titlesub, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-            className: "right fas fa-angle-left"
+      var match = _ref.match;
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
+        children: [props.data.navheader && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
+          className: "nav-header",
+          children: props.data.title
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
+          className: "nav-item",
+          children: [props.data.children ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components__WEBPACK_IMPORTED_MODULE_0__.Link, {
+            to: props.data.path,
+            className: "nav-link",
+            children: [icon, " ", titlesub]
+          }) : props.data.navheader !== true ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components__WEBPACK_IMPORTED_MODULE_0__.Link, {
+            to: props.data.path,
+            className: "nav-link",
+            children: [props.submenu === "active" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
+              className: "far fa-circle nav-icon"
+            }) : null, icon, " ", title]
+          }) : null, props.data.children && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("ul", {
+            className: "nav nav-treeview",
+            children: props.data.children && props.data.children.map(function (submenu, i) {
+              return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(SidebarNavList, {
+                data: submenu,
+                submenu: "active",
+                expand: function expand(e) {
+                  return handleExpand(e, i, match);
+                },
+                active: i === active,
+                clicked: clicked
+              }, i);
+            })
           })]
-        }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components__WEBPACK_IMPORTED_MODULE_0__.Link, {
-          to: props.data.path,
-          className: "nav-link",
-          children: [props.submenu === "active" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-            className: "far fa-circle nav-icon"
-          }) : null, icon, " ", title]
-        }), props.data.children && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("ul", {
-          className: "nav nav-treeview",
-          role: "tablist",
-          children: props.data.children && props.data.children.map(function (submenu, i) {
-            return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(SidebarNavList, {
-              data: submenu,
-              submenu: "active",
-              expand: function expand(e) {
-                return handleExpand(e, i, match);
-              },
-              active: i === active,
-              clicked: clicked
-            }, i);
-          })
         })]
       });
     }
@@ -5341,6 +5341,9 @@ var menu = [{
   icon: "nav-icon fas fa-pen-to-square",
   title: "Form Control"
 }, {
+  navheader: true,
+  title: "MULTI LEVEL EXAMPLE"
+}, {
   path: "#",
   icon: "nav-icon fas fa-database",
   title: "Menu Level",
@@ -5372,6 +5375,9 @@ var menu = [{
     is_show: false
   }]
 }, {
+  navheader: true,
+  title: "EXAMPLES"
+}, {
   path: "#",
   icon: "nav-icon fas fa-database",
   title: "Demo Page",
@@ -5383,13 +5389,9 @@ var menu = [{
     path: "/master-jenis",
     title: "Jenis",
     is_show: false
-  }, {
-    path: "/404",
-    title: "Page Not Found",
-    is_show: false
   }]
 }, {
-  path: "/logout",
+  path: "/",
   icon: "nav-icon fas fa-arrow-right-from-bracket",
   title: "Logout"
 }];

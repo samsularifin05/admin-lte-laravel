@@ -15,11 +15,11 @@ const Login = (props) => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        if (getItem("userdata").length === 0) {
-            props.history.push("/");
-        }else{
-            props.history.push("/dashboard");
-        }
+        // if (getItem("userdata").length === 0) {
+        //     props.history.push("/");
+        // }else{
+        //     props.history.push("/dashboard");
+        // }
         dispatch(actionTheme.handleSetPageSidebar(false));
         dispatch(actionTheme.handleSetFooter(false));
         dispatch(actionTheme.handleSetPageHeader(false));

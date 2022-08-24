@@ -76,7 +76,7 @@ const menu = [
     ]
   },
   {
-    path: "/",
+    path: "/logout",
     icon: "nav-icon fas fa-arrow-right-from-bracket",
     title: "Logout"
   }

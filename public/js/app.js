@@ -5274,6 +5274,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menu */ "./resources/frontend/src/components/sideBar/menu.jsx");
 /* harmony import */ var _SidebarNavList__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./SidebarNavList */ "./resources/frontend/src/components/sideBar/SidebarNavList.jsx");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+// import { Logo } from "../../assets";
 
 
 
@@ -5288,7 +5289,7 @@ var Sidebar = function Sidebar() {
       className: "brand-link text-center",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
         className: "brand-text font-weight-light text-center",
-        children: "AdminLTE 3"
+        children: "Laravel React"
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
       className: "sidebar",
@@ -5391,7 +5392,7 @@ var menu = [{
     is_show: false
   }]
 }, {
-  path: "/",
+  path: "/logout",
   icon: "nav-icon fas fa-arrow-right-from-bracket",
   title: "Logout"
 }];
@@ -6040,12 +6041,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 var Login = function Login(props) {
   var dispatch = (0,_components__WEBPACK_IMPORTED_MODULE_0__.useDispatch)();
   (0,_components__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    if ((0,_components__WEBPACK_IMPORTED_MODULE_0__.getItem)("userdata").length === 0) {
-      props.history.push("/");
-    } else {
-      props.history.push("/dashboard");
-    }
-
+    // if (getItem("userdata").length === 0) {
+    //     props.history.push("/");
+    // }else{
+    //     props.history.push("/dashboard");
+    // }
     dispatch(_reduxStore__WEBPACK_IMPORTED_MODULE_1__.actionTheme.handleSetPageSidebar(false));
     dispatch(_reduxStore__WEBPACK_IMPORTED_MODULE_1__.actionTheme.handleSetFooter(false));
     dispatch(_reduxStore__WEBPACK_IMPORTED_MODULE_1__.actionTheme.handleSetPageHeader(false));
@@ -6184,8 +6184,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components */ "./resources/frontend/src/components/index.jsx");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var react_loading_skeleton__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-loading-skeleton */ "./node_modules/react-loading-skeleton/dist/index.mjs");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
 
 
 
@@ -6196,10 +6198,15 @@ var Logout = function Logout(props) {
     (0,_components__WEBPACK_IMPORTED_MODULE_1__.removeItem)("userdata");
     props.history.push("/");
   });
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {});
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      width: "100%",
+      height: 1000
+    })
+  });
 };
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,react_router_dom__WEBPACK_IMPORTED_MODULE_3__.withRouter)(Logout));
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,react_router_dom__WEBPACK_IMPORTED_MODULE_4__.withRouter)(Logout));
 
 /***/ }),
 

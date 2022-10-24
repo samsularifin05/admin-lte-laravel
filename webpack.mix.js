@@ -5,6 +5,10 @@ require("laravel-mix-compress");
 
 mix.options({
     postCss: [require("autoprefixer")],
+    processCssUrls: true,
+    terser: {},
+    purifyCss: false,
+    clearConsole: false,
 })
     .setPublicPath("public")
     .webpackConfig({

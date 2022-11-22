@@ -1,8 +1,8 @@
 {
-    "/js/app.js": "/js/app.js?id=2d4b5e1ad600469000285631c2b7fd64",
-    "/css/app.css": "/css/app.css?id=7c5821984ed3875442e7c62a511926dd",
-    "/css/app.css.br": "/css/app.css.br?id=7adfc6b910e7bcd96253de28c3fc59c7",
-    "/css/app.css.gz": "/css/app.css.gz?id=6e146b6c1772b94954a2a68d39ebe15c",
+    "/js/app.js": "/js/app.js?id=8d2ef3622b10c7413b82ce1aaf14f358",
+    "/css/app.css": "/css/app.css?id=520454459aeeadb20475df3de68f6e12",
+    "/css/app.css.br": "/css/app.css.br?id=2fdd43fda8627960a9807b51958ddd99",
+    "/css/app.css.gz": "/css/app.css.gz?id=cba63762984e6550f3144512a344580d",
     "/favicon.ico": "/favicon.ico?id=b813881ffe7b1199eee34977e7a31bf9",
     "/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.ttf": "/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.ttf?id=271b60d8619482f8168b10c9d9bd75c6",
     "/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff2": "/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff2?id=0b5984039692449bafd77ec6b2a94ffd",
@@ -16,9 +16,9 @@
     "/images/logo.svg": "/images/logo.svg?id=06e733283fa43d1dd57738cfc409adbd",
     "/index.html": "/index.html?id=2deb861de187727d143a45e9f64980cc",
     "/index.php": "/index.php?id=3b58bff18126a61c142cc576457c82a6",
-    "/js/app.js.LICENSE.txt": "/js/app.js.LICENSE.txt?id=31d880b17f6a8bd4a8d41c38a92f0dbe",
-    "/js/app.js.br": "/js/app.js.br?id=0cd331d623a0132a4f728fb600c22758",
-    "/js/app.js.gz": "/js/app.js.gz?id=e38d5b6d36da2dd47b3255ed15ccf06a",
+    "/js/app.js.LICENSE.txt": "/js/app.js.LICENSE.txt?id=ab7264a92202ade757899a16b50b3e07",
+    "/js/app.js.br": "/js/app.js.br?id=129a443ab9b102c0aae433ae4bb2e15c",
+    "/js/app.js.gz": "/js/app.js.gz?id=4cfb3271930a2b5a20341bd734adbbbc",
     "/js/chunks/node_modules_web-vitals_dist_web-vitals_js.js": "/js/chunks/node_modules_web-vitals_dist_web-vitals_js.js?id=179aa87cec5771dd61ccd925db490996",
     "/js/chunks/resources_frontend_src_pages_datamaster_jenis_index_jsx.js": "/js/chunks/resources_frontend_src_pages_datamaster_jenis_index_jsx.js?id=773a679dbd375285f336b6831ddf126e",
     "/js/chunks/resources_frontend_src_pages_datamaster_kategori_index_jsx.js": "/js/chunks/resources_frontend_src_pages_datamaster_kategori_index_jsx.js?id=f988b7e1ad12397fc4f3915858083352",
@@ -32,6 +32,6 @@
     "/logo192.png": "/logo192.png?id=995306f3f1b50873ba0fe4c857a90d22",
     "/logo512.png": "/logo512.png?id=93c81d868a39562d52258e5b5b267644",
     "/manifest.json": "/manifest.json?id=d9d975cebe2ec20b6c652e1e4c12ccf0",
-    "/mix-manifest.json": "/mix-manifest.json?id=e1b5507d7e88bdbfe5cbe611c8a1d0f1",
+    "/mix-manifest.json": "/mix-manifest.json?id=207fd484b7c2ceeff7800b8c8a11b3b6",
     "/robots.txt": "/robots.txt?id=fa1ded1ed7c11438a9b0385b1e112850"
 }

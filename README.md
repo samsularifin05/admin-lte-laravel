@@ -11,7 +11,7 @@ pass : 123456
 1. composer install 
 2. cp .env.example .env
 3. php artisan key:generate
-4. npm install
+4. npm install / yarn install
 5. setting .env untuk konek ke database
 6. php artisan migrate
 7. php artisan db:seed

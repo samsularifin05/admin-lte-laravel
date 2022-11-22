@@ -1,26 +1,28 @@
-import { useSelector, React } from "../../components";
+import { useSelector } from "react-redux";
 import { selectorUtility } from "../../reduxStore";
-
+import React from 'react'
 const Button = (props) => {
   const isLoading = useSelector(selectorUtility.loading);
 
+  const { icon, title, onClick,textLoading, loading, type, color, block } = props;
+
   return (
     <button
-      disabled={props.loading ? (isLoading ? "disabled" : "") : ""}
-      type={props.type}
-      onClick={props.onClick}
-      className={`btn btn-${props.color} ${props.block && "btn-block"}`}
+      disabled={loading ? (isLoading.button ? "disabled" : "") : ""}
+      type={type}
+      onClick={onClick}
+      className={`btn btn-${color} ${block === undefined ? "" : "btn-block"}`}
     >
-      {props.loading ? (
-        isLoading ? (
+      {loading ? (
+        isLoading.button ? (
           <>
-            <i className="fas fa-spinner fa-spin"></i> &nbsp; {props.textLoading}
+            <i className="fas fa-spinner fa-spin"></i> &nbsp; {textLoading}
           </>
         ) : (
-          props.title
+          title || <i className={`fas ${icon}`}></i>
         )
       ) : (
-        props.title
+        title || <i className={`fas ${icon}`}></i>
       )}
     </button>
   );

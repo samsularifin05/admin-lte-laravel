@@ -15,11 +15,11 @@ const Login = (props) => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        // if (getItem("userdata").length === 0) {
-        //     props.history.push("/");
-        // }else{
-        //     props.history.push("/dashboard");
-        // }
+        if (getItem("userdata").length === 0) {
+            props.history.push("/");
+        }else{
+            props.history.push("/dashboard");
+        }
         dispatch(actionTheme.handleSetPageSidebar(false));
         dispatch(actionTheme.handleSetFooter(false));
         dispatch(actionTheme.handleSetPageHeader(false));
@@ -32,7 +32,7 @@ const Login = (props) => {
     }, [dispatch]);
 
     const handleSubmit = async (data) => {
-        dispatch(utilityAction.setLoading(true));
+        dispatch(utilityAction.setLoading("content"));
         try {
             let feedback = await postData("login", {
                 email: data.email,
@@ -40,16 +40,17 @@ const Login = (props) => {
             })
             if(feedback.status === 200){
                 setItem("userdata", feedback.data.result);
-                dispatch(utilityAction.setLoading(false));
+
                 setTimeout(() => {
                     props.history.push("/dashboard");
                     window.location.reload();
                 }, 300);
             }
+            dispatch(utilityAction.stopLoading());
         } catch (error) {
             console.log(error)
              ToastNotification("info", error?.message);
-             dispatch(utilityAction.setLoading(false));
+             dispatch(utilityAction.stopLoading());
         }
     };
     return (

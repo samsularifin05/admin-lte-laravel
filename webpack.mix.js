@@ -27,9 +27,9 @@ mix.options({
     .version()
     .sass("resources/css/app.scss", "public/css/app.css")
     .version()
-    .purgeCss({
-        safelist: [/row*/, /btn*/, /col*/],
-    })
+    // .purgeCss({
+    //     safelist: [/row*/, /btn*/, /col*/],
+    // })
     .copy("resources/frontend/public", "public").compress()
     .setResourceRoot("../")
     .browserSync("127.0.0.1:8000");

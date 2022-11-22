@@ -28,8 +28,11 @@ import { reduxForm } from "redux-form";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
-
+import TabelMaster from "./helper/TabelMaster";
+import ModalGlobal from "./helper/ModalGlobal";
 export {
+    ModalGlobal,
+    TabelMaster,
   removeItem,
   ToastNotification,
   getItem,

@@ -9,7 +9,6 @@ import {
 import { reduxForm } from "redux-form";
 import Validate from "../validate";
 let FormLogin = (props) => {
-
     return (
         <form method="post" onSubmit={props.handleSubmit}>
             <Field
@@ -21,11 +20,12 @@ let FormLogin = (props) => {
             />
             <Field
                 name="password"
-                type="password"
+                type="text"
                 component={ReanderField}
                 placeholder="Silahkan Masukan Passwsord"
                 iconFormGroup="fas fa-lock"
                 formGroup
+                customeCss="password-hide-css"
             />
             <Row>
                 <Col size="12">

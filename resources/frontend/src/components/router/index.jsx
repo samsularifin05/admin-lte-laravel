@@ -1,4 +1,4 @@
-import { Dashboard, FormControl, Jenis, Kategori, Login } from "../../pages";
+import { Dashboard, DemoTabel, FormControl, Login } from "../../pages";
 import Logout from "../../pages/logout";
 
 const MenuRoutes = [
@@ -14,31 +14,22 @@ const MenuRoutes = [
     title: "Dashboard",
     component: () => <Dashboard />
   },
-  {
-    path: "/master-kategori",
-    exact: true,
-    title: "Master Kategori",
-    component: () => <Kategori />
-  },
-  {
-    path: "/master-jenis",
-    exact: true,
-    title: "Master Jenis",
-    component: () => <Jenis />
-  },
+
   {
     path: "/form-control",
     exact: true,
     title: "Form Control",
     component: () => <FormControl />
   },
+
   {
-    path: "/logout",
+    path: "/demo-tabel",
     exact: true,
-    title: "Form Control",
-    component: () => <Logout />
+    title: "Demo Tabel",
+    component: () => <DemoTabel />
   },
- 
+
+
 ];
 
 export default MenuRoutes;

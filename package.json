@@ -31,6 +31,8 @@
     },
     "dependencies": {
         "@fortawesome/fontawesome-free": "^6.1.1",
+        "ant-table-extensions": "^1.1.7",
+        "antd": "^5.0.0",
         "compression-webpack-plugin": "^10.0.0",
         "jquery": "3.6.0",
         "react-fullscreen-loading": "^0.0.4",

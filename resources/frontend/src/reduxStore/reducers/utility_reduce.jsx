@@ -1,12 +1,26 @@
-import { ISLOADING,PROGRES } from "../actions/utility_action";
+import {  ISLOADING,OPEN_MODAL,PROGRES } from "../actions/utility_action";
 
 const initialState = {
-  getLoading: false,
-  getProgres : 0
+  getLoading: {
+    content: false,
+    button: false,
+    tabel: false
+  },
+  getProgres : 0,
+  modalShow: {
+    isModalShow: false,
+    isEdit: false,
+    data: []
+  },
 };
 
 const utility = (state = initialState, actions) => {
   switch (actions.type) {
+    case OPEN_MODAL:
+      return {
+        ...state,
+        modalShow: actions.payload
+      };
     case ISLOADING:
       return {
         ...state,

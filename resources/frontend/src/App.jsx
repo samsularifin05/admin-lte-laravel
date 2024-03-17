@@ -1,4 +1,4 @@
-import { Suspense } from "react";
+import { Suspense, useEffect } from "react";
 import {
     Content,
     Header,
@@ -9,12 +9,40 @@ import {
     useSelector,
     LoadingContent,
     getItem,
+    useWindowSize,
+    removeWindowClass,
+    calculateWindowSize,
+    useDispatch,
+    addWindowClass,
 } from "./components/index.jsx";
-import { selectorThemes, selectorUtility } from "./reduxStore";
-import Skeleton from "react-loading-skeleton";
+import { selectorThemes, selectorUtility, utilityAction } from "./reduxStore";
 import { Redirect } from "react-router-dom";
 //Tes
 const App = () => {
+    const windowSize = useWindowSize();
+    const screenSize = useSelector(selectorUtility.screenSize);
+    const menuSidebarCollapsed = useSelector(
+        selectorUtility.menuSidebarCollapsed
+    );
+
+    const dispatch = useDispatch();
+    useEffect(() => {
+        removeWindowClass("sidebar-closed");
+        removeWindowClass("sidebar-collapse");
+        removeWindowClass("sidebar-open");
+        const size = calculateWindowSize(windowSize.width);
+        if (screenSize !== size) {
+            dispatch(utilityAction.screenSize(size));
+        }
+        if (menuSidebarCollapsed && screenSize === "lg") {
+            addWindowClass("sidebar-collapse");
+        } else if (menuSidebarCollapsed && screenSize === "xs") {
+            addWindowClass("sidebar-open");
+        } else if (!menuSidebarCollapsed && screenSize !== "lg") {
+            addWindowClass("sidebar-closed");
+            addWindowClass("sidebar-collapse");
+        }
+    }, [windowSize, menuSidebarCollapsed, dispatch, screenSize]);
     const content = useSelector(selectorThemes.handleSetContent);
     const header = useSelector(selectorThemes.handleSetPageHeader);
     const sidebar = useSelector(selectorThemes.handleSetPageSidebar);
@@ -22,8 +50,11 @@ const App = () => {
     const progress = useSelector(selectorUtility.progress);
     const loading = useSelector(selectorUtility.loading);
     const isAuthenticated = getItem("userdata");
+    const handleToggleMenuSidebar = () => {
+        dispatch(utilityAction.toggleSidebarMenu(!menuSidebarCollapsed));
+    };
     return (
-        <Suspense fallback={<Skeleton width={"100%"} height={1000} />}>
+        <div className="wrapper">
             {isAuthenticated.length !== 0 ? (
                 <div>
                     {header && <Header />}
@@ -41,7 +72,12 @@ const App = () => {
                     {content && <Content />}
                 </div>
             )}
-        </Suspense>
+            <div
+                id="sidebar-overlay"
+                role="presentation"
+                onClick={handleToggleMenuSidebar}
+            />
+        </div>
     );
 };
 

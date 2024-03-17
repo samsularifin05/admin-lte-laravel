@@ -6,6 +6,7 @@ import {
     Col,
     useDispatch,
 } from "../../../../components";
+import { utilityAction } from "../../../../reduxStore";
 import { handleEdit } from "../redux";
 const DataTabel = () => {
     const dispatch = useDispatch();
@@ -70,11 +71,19 @@ const DataTabel = () => {
         },
     ];
 
-
     return (
         <TabelMaster
-            createData={true}
+            addButtonTitle={"Add Data"}
             rowKey="id"
+            onAddButtonClick={() =>
+                dispatch(
+                    utilityAction.modalShow({
+                        isModalShow: true,
+                        isEdit: false,
+                        data: [],
+                    })
+                )
+            }
             columns={columns}
             dataSource={data}
         />

@@ -12,8 +12,8 @@
     <title>laravel-react-admin-lte</title>
 </head>
 
-<body class="hold-transition sidebar-mini layout-fixed">
-    <div id="root" class="wrapper"></div>
+<body id="body" class="sidebar-mini">
+    <div id="root" class="sidebar-mini wrapper"></div>
 </body>
 <script src="{{ mix('js/app.js') }}" type="text/javascript"></script>
 

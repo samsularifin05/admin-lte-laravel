@@ -7,11 +7,6 @@ const Sidebar = () => {
     return (
         <aside className="main-sidebar sidebar-dark-primary elevation-4">
             <Link to="/" className="brand-link text-center">
-                {/* <img src={Logo} alt="Logo App"
-                    class="brand-image img-circle elevation-3"
-                    style={{ opacity: "0.8" }}
-                /> */}
-                   
                 <span className="brand-text font-weight-light text-center">
                     Laravel React
                 </span>

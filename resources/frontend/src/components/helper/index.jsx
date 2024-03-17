@@ -3,10 +3,43 @@ import Loading from "react-fullscreen-loading";
 import Select from "react-select";
 import Axios from "axios";
 import Swal from "sweetalert2";
+import { useEffect, useState } from "react";
 
 const server =
     document.querySelector('meta[name="base_url"]').content + "/api/";
 
+export const removeWindowClass = (classList) => {
+    const window = document && document.getElementById("root");
+    if (window) {
+        // @ts-ignore
+        window.classList.remove(classList);
+    }
+};
+export const addWindowClass = (classList) => {
+    const window = document && document.getElementById("root");
+    if (window) {
+        // @ts-ignore
+        window.classList.add(classList);
+    }
+};
+export const useWindowSize = () => {
+    const [windowSize, setWindowSize] = useState({
+        width: window.innerWidth,
+        height: window.innerHeight,
+    });
+    useEffect(() => {
+        function handleResize() {
+            setWindowSize({
+                width: window.innerWidth,
+                height: window.innerHeight,
+            });
+        }
+        window.addEventListener("resize", handleResize);
+        handleResize();
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+    return windowSize;
+};
 export function postData(endpoint, data) {
     let config = {
         headers: {
@@ -23,6 +56,90 @@ export function postData(endpoint, data) {
             });
     });
 }
+export const calculateWindowSize = () => {
+    let currentSize = "";
+    if (!currentSize) {
+        currentSize =
+            window.innerWidth >= 1200
+                ? "lg"
+                : window.innerWidth >= 600
+                ? "md"
+                : window.innerWidth >= 375
+                ? "sm"
+                : window.innerWidth >= 300
+                ? "xs"
+                : "xxs";
+
+        window.addEventListener("resize", function () {
+            const newSize =
+                window.innerWidth >= 1200
+                    ? "lg"
+                    : window.innerWidth >= 600
+                    ? "md"
+                    : window.innerWidth >= 375
+                    ? "sm"
+                    : window.innerWidth >= 300
+                    ? "xs"
+                    : "xxs";
+
+            if (newSize !== currentSize) {
+                currentSize = newSize;
+            }
+        });
+    }
+
+    return currentSize;
+};
+
+export const JSONToCSVConvertor = (JSONData, ReportTitle, ShowLabel) => {
+    const arrData =
+        typeof JSONData !== "object" ? JSON.parse(JSONData) : JSONData;
+
+    let CSV = "";
+
+    if (ShowLabel) {
+        let name = "";
+
+        for (const index in arrData[0]) {
+            name += index + ",";
+        }
+
+        name = name.slice(0, -1);
+
+        CSV += name + "\r\n";
+    }
+
+    for (let i = 0; i < arrData.length; i++) {
+        let row = "";
+
+        for (const index in arrData[i]) {
+            row += `"${arrData[i][index]}",`;
+        }
+
+        row = row.slice(0, row.length - 1);
+
+        CSV += row + "\r\n";
+    }
+
+    if (CSV === "") {
+        alert("Invalid data");
+        return;
+    }
+
+    let fileName = "";
+    fileName += ReportTitle.replace(/ /g, "_");
+
+    const uri = "data:text/csv;charset=utf-8," + escape(CSV);
+
+    const link = document.createElement("a");
+    link.href = uri;
+    link.style.visibility = "hidden";
+    link.download = fileName + ".csv";
+
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
 
 export const setItem = (nama, data) => {
     localStorage.setItem(nama, JSON.stringify(data));

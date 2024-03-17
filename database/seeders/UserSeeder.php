@@ -2,10 +2,11 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Support\Str;
+
 class UserSeeder extends Seeder
 {
     /**
@@ -15,11 +16,12 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-       User::create([
+        User::create([
             'name' => 'superadmin',
             'email' => 'superadmin@gmail.com',
             'password' => bcrypt('123456'),
             'remember_token' => Str::random(10),
+            'expires_at' => Carbon::now()->addYear(),
         ]);
     }
 }

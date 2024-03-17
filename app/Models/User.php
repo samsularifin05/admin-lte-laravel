@@ -19,8 +19,13 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
-        'email',
-        'password',
+        'token',
+        'abilities',
+        'expires_at', // Add this line if it's missing
+        'tokenable_id',
+        'tokenable_type',
+        'updated_at',
+        'created_at',
     ];
 
     /**

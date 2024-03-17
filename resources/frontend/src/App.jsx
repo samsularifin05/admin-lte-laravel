@@ -43,6 +43,7 @@ const App = () => {
             addWindowClass("sidebar-collapse");
         }
     }, [windowSize, menuSidebarCollapsed, dispatch, screenSize]);
+
     const content = useSelector(selectorThemes.handleSetContent);
     const header = useSelector(selectorThemes.handleSetPageHeader);
     const sidebar = useSelector(selectorThemes.handleSetPageSidebar);

@@ -36,16 +36,15 @@ const Header = () => {
         <nav className="main-header navbar navbar-expand navbar-white navbar-light">
             <ul className="navbar-nav">
                 <li className="nav-item">
-                    <Link
+                    <span
                         className="nav-link"
-                        aria-label="Sidebar Menu"
-                        data-widget="pushmenu"
-                        to="#"
                         onClick={handleToggleMenuSidebar}
+                        data-widget="pushmenu"
+                        aria-label="Menu Hide Bar"
                         role="button"
                     >
-                        <i className="fas fa-bars"></i>
-                    </Link>
+                        <i className="fas fa-bars" />
+                    </span>
                 </li>
                 <li className="nav-item d-none d-sm-inline-block">
                     <Link

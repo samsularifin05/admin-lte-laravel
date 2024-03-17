@@ -16,7 +16,7 @@
         "@testing-library/react": "^13.3.0",
         "@testing-library/user-event": "^13.5.0",
         "bread-compressor-cli": "^1.1.0",
-        "browser-sync": "^2.27.10",
+        "browser-sync": "^3.0.2",
         "browser-sync-webpack-plugin": "^2.3.0",
         "laravel-mix": "^6.0.49",
         "laravel-mix-compress": "^3.0.0",

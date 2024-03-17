@@ -56,41 +56,18 @@ export function postData(endpoint, data) {
             });
     });
 }
-export const calculateWindowSize = () => {
-    let currentSize = "";
-    if (!currentSize) {
-        currentSize =
-            window.innerWidth >= 1200
-                ? "lg"
-                : window.innerWidth >= 600
-                ? "md"
-                : window.innerWidth >= 375
-                ? "sm"
-                : window.innerWidth >= 300
-                ? "xs"
-                : "xxs";
-
-        window.addEventListener("resize", function () {
-            const newSize =
-                window.innerWidth >= 1200
-                    ? "lg"
-                    : window.innerWidth >= 600
-                    ? "md"
-                    : window.innerWidth >= 375
-                    ? "sm"
-                    : window.innerWidth >= 300
-                    ? "xs"
-                    : "xxs";
-
-            if (newSize !== currentSize) {
-                currentSize = newSize;
-            }
-        });
+export const calculateWindowSize = (windowWidth) => {
+    if (windowWidth >= 1200) {
+        return "lg";
     }
-
-    return currentSize;
+    if (windowWidth >= 992) {
+        return "md";
+    }
+    if (windowWidth >= 768) {
+        return "sm";
+    }
+    return "xs";
 };
-
 export const JSONToCSVConvertor = (JSONData, ReportTitle, ShowLabel) => {
     const arrData =
         typeof JSONData !== "object" ? JSON.parse(JSONData) : JSONData;
